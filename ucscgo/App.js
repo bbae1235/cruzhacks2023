@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.setFontSizeThree}>Welcome to UCSC Go!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +13,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#76ba76',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  setFontSizeThree: {
+    fontSize: 25 // Define font size here in Pixels
   },
 });
