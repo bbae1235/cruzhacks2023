@@ -26,9 +26,9 @@ function HomeScreencomp({ navigation }) {
       {/*Buttons*/}
       <View style={styles.footerContainer}>
       <View style={styles.space} />
-      <Button theme="primary" label="UCSC Landmarks Button" />
+      <Button theme="primary" label="UCSC Landmarks Button" routeName = "UCSC Landmarks Name" />
       <View style={styles.space} />
-      <Button theme="secondary" label="UCSC Study Rooms Button" />
+      <Button theme="primary" label="UCSC Study Rooms Button" routeName = "UCSC Study Rooms Name" />
       <View style={styles.space} />
       </View>
   
@@ -44,40 +44,67 @@ function SCLandMarkcomp( navigation ) {
     <View style={styles.footerContainer}>
       <View style={styles.space} />
       {/* Buttons within UCSC Landmarks */}
-      <Button theme="primary" label="C9/JRL Hiking Trail" />
+      <Button theme="primary" label="C9/JRL Hiking Trail button" routeName = "HikingTrail Name" />
       <View style={styles.space} />
-      <Button theme="primary" label="Porter Caves/Meadows" />
+      <Button theme="primary" label="Porter Caves/Meadows button" routeName = "Porter Name" />
       <View style={styles.space} />
-      <Button theme="primary" label="Oakes Meadows" />
+      <Button theme="primary" label="Oakes Meadows button" routeName = "Oakes Name" />
       <View style={styles.space} />
-      <Button theme="primary" label="Secret Area/Stage..." />
-      </View>
-      </View>
+      <Button theme="primary" label="Secret Area/Stage... button" routeName = "Secret Name" />
+    </View>
+    </View>
+  );
+}
+
+function CNJR( navigation ) {
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary ">UCSC Go!</Text>
+    </View>
+    </View>
   );
 }
 
 //C9/C10 component
 function HIKEcomp( navigation ){
-  return (
+  return(
     <View style={styles.container}>
-    <View style={styles.footerContainer}></View>
-    <Text>UCSC Go!</Text>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
     </View>
   );
 }
 
-//Study Rooms component
-function StudyRoomscomp( navigation ) {
-  return (
+function PORTERcomp( navigation ){
+  return(
+    <View style={styles.container}>
     <View style={styles.footerContainer}>
-      {/* Buttons within UCSC Study Rooms */}
-      <Button theme="Study Rooms" label="C9/JRL College" />
-      <Button theme="Study Rooms" label="Crown/Merrill" />
-      <Button theme="Study Rooms" label="Cowell/Stevenson" />
-      <Button theme="Study Rooms" label="Porter/Kresge" />
-      <Button theme="Study Rooms" label="Rachel Carson/Oakes" />
+    <Text theme="primary">UCSC Go!</Text>
     </View>
-  )
+    </View>
+  );
+}
+
+function OAKEScomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
+}
+
+function SECRETcomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
 }
 
 //const ucscImage = require('./assets/UCSCGo.png');
@@ -99,28 +126,55 @@ export default function App() {
         name="Home"
         component={HomeScreencomp}
         options={{ title: 'Overview'}} />
+        
         <Stack.Screen
-      
-        name="UCSC Landmarks name" 
+        name="UCSC Landmarks Name" 
         component={SCLandMarkcomp} 
         options={{ title: 'UCSC Landmarks'}} />
         {/* This is for landmarks */}
+
         <Stack.Screen
-        name="UCSC Study Rooms" 
-        component={StudyRoomscomp} 
-        options={{ title: 'UCSC StudyRooms'}} />
+        name="HikingTrail Name"
+        component={HIKEcomp}
+        options={{ title: 'HikingTrail'}} />
+        
+      
+        <Stack.Screen
+        name="Porter Name"
+        component={PORTERcomp}
+        options={{ title: 'Porter Caves/Meadows'}} />
+
+        <Stack.Screen
+        name="Oakes Name"
+        component={OAKEScomp}
+        options={{ title: 'Oakes Meadows'}} />
+
+        <Stack.Screen
+        name="Secret Name"
+        component={SECRETcomp}
+        options={{ title: 'Secret Area/Stage...'}} />
+      
+
 
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+  }
 {/*      
-<Stack.Navigator initialRouteName="UCSC Landmarks">
-<Stack.Screen 
-name="C9/JRL Hiking Trail" 
-component={HIKE} 
-options={{ title: 'College 9/ JRL Trails'}} />
-</Stack.Navigator> */}
+    <NavigationContainer>
+      <StackLandmark.Navigator initialRouteName="Landmark">
+        <StackLandmark.Screen
+        name="Landmark"
+        component={SCLandMarkcomp}
+        options={{ title: 'Landmark Overview'}} />
+        <StackLandmark.Screen
+
+        name="HikingTrail"
+        component={HIKEcomp}
+        options={{ title: 'HikingTrail name'}} />
+        
+      </StackLandmark.Navigator>
+    </NavigationContainer> */}
 
 
 {/*This is for Study Rooms */}
