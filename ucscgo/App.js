@@ -11,8 +11,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ImageViewer from './components/ImageViewer'; //homescreen image
 import Button from './components/Button';
 
-//This is the HomeScreen
-function HomeScreen({ navigation }) {
+//This is the HomeScreen "component"
+function HomeScreencomp({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -26,9 +26,9 @@ function HomeScreen({ navigation }) {
       {/*Buttons*/}
       <View style={styles.footerContainer}>
       <View style={styles.space} />
-      <Button theme="primary" label="UCSC Landmarks" />
+      <Button theme="primary" label="UCSC Landmarks Button" />
       <View style={styles.space} />
-      <Button theme="secondary" label="UCSC Study Rooms" />
+      <Button theme="secondary" label="UCSC Study Rooms Button" />
       <View style={styles.space} />
       </View>
   
@@ -37,8 +37,8 @@ function HomeScreen({ navigation }) {
   );
 }
 
-//This is the Santa Cruz Landmarks
-function SCLandMark( navigation ) {
+//This is the Santa Cruz Landmarks component
+function SCLandMarkcomp( navigation ) {
   return (
     <View style={styles.container}>
     <View style={styles.footerContainer}>
@@ -56,7 +56,8 @@ function SCLandMark( navigation ) {
   );
 }
 
-function HIKE( navigation ){
+//C9/C10 component
+function HIKEcomp( navigation ){
   return (
     <View style={styles.container}>
     <View style={styles.footerContainer}></View>
@@ -65,7 +66,8 @@ function HIKE( navigation ){
   );
 }
 
-function StudyRooms( navigation ) {
+//Study Rooms component
+function StudyRoomscomp( navigation ) {
   return (
     <View style={styles.footerContainer}>
       {/* Buttons within UCSC Study Rooms */}
@@ -92,16 +94,22 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen 
-        name="Home" 
-        component={HomeScreen}
+        /* Name is used to navigate
+          and Component is the component it'll render */
+        name="Home"
+        component={HomeScreencomp}
         options={{ title: 'Overview'}} />
-        <Stack.Screen 
+        <Stack.Screen
       
-
-        name="UCSC Landmarks" 
-        component={SCLandMark} 
+        name="UCSC Landmarks name" 
+        component={SCLandMarkcomp} 
         options={{ title: 'UCSC Landmarks'}} />
         {/* This is for landmarks */}
+        <Stack.Screen
+        name="UCSC Study Rooms" 
+        component={StudyRoomscomp} 
+        options={{ title: 'UCSC StudyRooms'}} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
