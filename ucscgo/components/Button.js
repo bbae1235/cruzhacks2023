@@ -3,16 +3,18 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useNavigation, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function Button({ label, theme }) {
+
+
+export default function Button({ theme, label, routeName }) {
     const navigation = useNavigation()
-    if (theme === "primary") {
+    if (theme == "primary") {
         return (
           <View
           style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18}]}
           >
             <Pressable
               style={[styles.button, { backgroundColor: "#fff" }]}
-              onPress={() => navigation.navigate('UCSC Landmarks name')}
+              onPress={() => navigation.navigate(routeName)}
             >
               <FontAwesome
                 //name=""
@@ -24,26 +26,6 @@ export default function Button({ label, theme }) {
             </Pressable>
         </View>
         );
-    }
-    if (theme == "secondary") {
-      return (
-        <View
-        style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18}]}
-        >
-          <Pressable
-            style={[styles.button, { backgroundColor: "#fff" }]}
-            onPress={() => navigation.navigate('UCSC Study Rooms')}
-          >
-            <FontAwesome
-              //name=""
-              size={16}
-              color="#25292e"
-              style={styles.buttonIcon}
-            />
-            <Text style={[styles.buttonLabel, { color: "#25292e" }]}>{label}</Text>
-          </Pressable>
-      </View>
-      );
     }
 
     return (
