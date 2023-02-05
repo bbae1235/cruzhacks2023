@@ -25,8 +25,11 @@ function HomeScreen({ navigation }) {
     </View>
       {/*Buttons*/}
       <View style={styles.footerContainer}>
+      <View style={styles.space} />
       <Button theme="primary" label="UCSC Landmarks" />
-      <Button theme="primary" label="UCSC Study Rooms" />
+      <View style={styles.space} />
+      <Button theme="secondary" label="UCSC Study Rooms" />
+      <View style={styles.space} />
       </View>
   
       <StatusBar style = "auto" />
@@ -35,12 +38,44 @@ function HomeScreen({ navigation }) {
 }
 
 //This is the Santa Cruz Landmarks
-function SCLandMark() {
+function SCLandMark( navigation ) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+      <View style={styles.space} />
+      {/* Buttons within UCSC Landmarks */}
+      <Button theme="primary" label="C9/JRL Hiking Trail" />
+      <View style={styles.space} />
+      <Button theme="primary" label="Porter Caves/Meadows" />
+      <View style={styles.space} />
+      <Button theme="primary" label="Oakes Meadows" />
+      <View style={styles.space} />
+      <Button theme="primary" label="Secret Area/Stage..." />
+      </View>
+      </View>
+  );
+}
+
+function HIKE( navigation ){
+  return (
+    <View style={styles.container}>
+    <View style={styles.footerContainer}></View>
+    <Text>UCSC Go!</Text>
     </View>
   );
+}
+
+function StudyRooms( navigation ) {
+  return (
+    <View style={styles.footerContainer}>
+      {/* Buttons within UCSC Study Rooms */}
+      <Button theme="Study Rooms" label="C9/JRL College" />
+      <Button theme="Study Rooms" label="Crown/Merrill" />
+      <Button theme="Study Rooms" label="Cowell/Stevenson" />
+      <Button theme="Study Rooms" label="Porter/Kresge" />
+      <Button theme="Study Rooms" label="Rachel Carson/Oakes" />
+    </View>
+  )
 }
 
 //const ucscImage = require('./assets/UCSCGo.png');
@@ -61,14 +96,34 @@ export default function App() {
         component={HomeScreen}
         options={{ title: 'Overview'}} />
         <Stack.Screen 
+      
+
         name="UCSC Landmarks" 
         component={SCLandMark} 
-        options={{ title: 'Landmarks'}} />
+        options={{ title: 'UCSC Landmarks'}} />
+        {/* This is for landmarks */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+{/*      
+<Stack.Navigator initialRouteName="UCSC Landmarks">
+<Stack.Screen 
+name="C9/JRL Hiking Trail" 
+component={HIKE} 
+options={{ title: 'College 9/ JRL Trails'}} />
+</Stack.Navigator> */}
 
+
+{/*This is for Study Rooms */}
+{/*
+<Stack.Navigator initialRouteName="Home">
+<Stack.Screen
+name="Study Rooms" 
+component={StudyRooms} 
+options={{ title: 'UCSC Study Rooms'}} />
+</Stack.Navigator>
+*/}
 
 const styles = StyleSheet.create({
   //container for whole screen
@@ -104,4 +159,14 @@ const styles = StyleSheet.create({
   setColorYellow :{
     color: '#FFFF00'
   },
+  setColorBlack :{
+    color: '#000000'
+  },
+  space: {
+    width: 20, // or whatever size you need
+    height: 20,
+  },
+  SCLandMark: {
+    backgroundColor: '#003c6c'
+  }
 })
