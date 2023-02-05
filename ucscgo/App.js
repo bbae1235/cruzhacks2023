@@ -187,7 +187,20 @@ function C9C10comp( navigation ){
   return(
     <View style={styles.container}>
     <View style={styles.footerContainer}>
-    <Text theme="primary">UCSC GO!</Text>
+    <Text theme="primary" style={[styles.setFontSizeThree]}>
+    One of our recommended spots at C9/JRL college is Terry Freitas Cafe. Open from 9am-9pm
+    Monday through Friday, Terry Freitas cafe offers you a comforting and cozy studying 
+    environment. What makes it so relaxing is due to the soft music playing in the background, 
+    comfortable seating, and even a pool table for your study breaks. One notable thing to
+    mention is that Terry Freitas also has a shelf full of essential groceries that anyone
+    with a student ID can take home. 
+    ------------------------------------------
+    How to get there? One route starts from the C9/JRL bus stop and take the trail leading 
+    to the dining hall and turn left where Terry Freitas will be. Another starts from the C9
+    mail room and from there, you would walk towards the dining hall. Walk past the dining 
+    hall entrance towards the small staircase leading to Terry Freitas cafe. 
+
+    </Text>
     </View>
     </View>
   );
@@ -197,7 +210,17 @@ function PorterKresgecomp( navigation ){
   return(
     <View style={styles.container}>
     <View style={styles.footerContainer}>
-    <Text theme="primary">UCSC Go!</Text>
+    <Text theme="primary" style={[styles.setFontSizeThree]}>
+    A nice little spot at Porter/Kresge is the Kresge Student Lounge. Able to seat about 
+    20 people, this space is most suitable for student groups needing a comfortable and
+    quiet work space. The lounge is also equipped with a tv for students if they need it
+    for any assignments or just for fun!This space is available for reservation so groups 
+    can plan ahead and set a date for collaborative work time. Open 24/7. 
+    ------------------------------------------
+    Where is the Kresge Student Lounge? The lounge is located next to the transfer student 
+    center and the R-1 flats. If you start from parking lot 143, you can head towards the R-1
+    flats and turn left at the first staircase and to your left again, the lounge will be there.
+    </Text>
     </View>
     </View>
   );
@@ -207,7 +230,18 @@ function RCCOakescomp( navigation ){
   return(
     <View style={styles.container}>
     <View style={styles.footerContainer}>
-    <Text theme="primary">UCSC Go!</Text>
+    <Text theme="primary" style={[styles.setFontSizeThree]}>
+    The Academic Resources Center (ARCenter) is a great place for students seeking
+    assistance. LSS is a program with tutors and mentors who provide a variety of 
+    options for students who need help in their classes. They have workshops, group 
+    tutoring, and even 1-on-1 tutoring for writing. This is highly recommended for every 
+    UCSC student and is open 9am-6pm Monday through Friday.
+    ------------------------------------------
+    The ARC facility is located east of Heller Drive and south of McHenry Library. One route
+    starts at McHenry rd behind McHenry library and keep following it until you see the ARC 
+    building. It's right before Baskin Service Road and there is a staircase leading up to the
+    building.
+    </Text>  
     </View>
     </View>
   );
@@ -217,17 +251,52 @@ function StevensonCowellcomp( navigation ){
   return(
     <View style={styles.container}>
     <View style={styles.footerContainer}>
-    <Text theme="primary">UCSC Go!</Text>
+    <Text theme="primary" style={[styles.setFontSizeThree]}>
+    A great spot at Cowell/Stevenson college for studying is the Adlai E. Stevenson Library.
+    This library has a unique and appealing aesthetic while also providing a great studious
+    environment. The walls are lined with shelves full of books and there are plenty of tables,
+    chairs, and couches. The library is open 24 hours all seven days of the week.
+    ------------------------------------------
+    To get to the Adlai E. Stevenson Library, start at the Cowell/Stevenson dining hall. Walk 
+    down the staircase towards the Stevenson Service Road and turn left right after you pass the
+    Wagstadd Fireside Lounge. Walk up the path until the library is on your right.
+    </Text>
     </View>
     </View>
   );
 }
 
+{/*
+One our favorite student experiences is going to the Porter Caves & Meadows, in 
+which we believe everyone should go at least once! To get to the caves, you must 
+first reach the meadows. This includes a nice nature trail that UCSC students go
+and pass their time. Whether you're just exploring or having a picnic, the experience
+is very peaceful. Porter's Cave requires you to get yourself a bit dirty as it is very
+wet and cold.
+------------------------------------------
+Now, how would get there? First you'd need to get towards the meadows. The meadows are 
+located in the field next to Porter Dining Hall. You'll first head towards that area,
+to which you should be walking down a small slope to enter. Now getting to the cave 
+itself is a bit tricky but you'll need to go straight and turn a right near Empire
+Grade. You'll have to get there from a hill and climbing down. It is highly advised to
+bring along a friend and clothes you do not mind getting dirty as you start your journey! 
+*/}
 function CrownMerrillcomp( navigation ){
   return(
     <View style={styles.container}>
     <View style={styles.footerContainer}>
-    <Text theme="primary">UCSC Go!</Text>
+    <Text theme="primary" style={[styles.setFontSizeThree]}>
+    Crown/Merrill college has a very cool library great for students wanting to study. The 
+    Merrill Library/Casa Latina is open from 8am-2am Monday through Friday and is a quiet study 
+    area for the whole time. There are two floors, lots of space to work, and two single bathrooms 
+    as well. It is also conveniently located near the Ming Ong Computer Lab for anyone looking to
+    work there if needed. 
+    ------------------------------------------
+    If you want to get to Merrill Library/Casa Lounge, then start at the Crown/Merrill dining hall 
+    and walk down the path heading east. Keep continuing towards the very next building after you 
+    pass the Charles E. Merrill lounge. Enter through the door located on the right side of the 
+    building.
+    </Text>
     </View>
     </View>
   );
