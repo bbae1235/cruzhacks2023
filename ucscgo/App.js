@@ -12,7 +12,7 @@ import ImageViewer from './components/ImageViewer'; //homescreen image
 import Button from './components/Button';
 
 //This is the HomeScreen
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -56,8 +56,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="UCSC Landmarks" component={SCLandMark} />
+        <Stack.Screen 
+        name="Home" 
+        component={HomeScreen}
+        options={{ title: 'Overview'}} />
+        <Stack.Screen 
+        name="UCSC Landmarks" 
+        component={SCLandMark} 
+        options={{ title: 'Landmarks'}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
