@@ -190,13 +190,13 @@ function C9C10comp( navigation ){
     <Text theme="primary" style={[styles.setFontSizeThree]}>
     One of our recommended spots at C9/JRL college is Terry Freitas Cafe. Open from 9am-9pm
     Monday through Friday, Terry Freitas cafe offers you a comforting and cozy studying 
-    environment. What makes it so relaxing is due to the soft music playing in the background, 
+    environment. What makes it so relaxing is the soft music playing in the background, 
     comfortable seating, and even a pool table for your study breaks. One notable thing to
     mention is that Terry Freitas also has a shelf full of essential groceries that anyone
     with a student ID can take home. 
     ------------------------------------------
     How to get there? One route starts from the C9/JRL bus stop and take the trail leading 
-    to the dining hall and turn left where Terry Freitas will be. Another starts from the C9
+    to the dining hall and turn left where Terry Freitas will be. Another starts from the College 9
     mail room and from there, you would walk towards the dining hall. Walk past the dining 
     hall entrance towards the small staircase leading to Terry Freitas cafe. 
 
@@ -219,7 +219,7 @@ function PorterKresgecomp( navigation ){
     ------------------------------------------
     Where is the Kresge Student Lounge? The lounge is located next to the transfer student 
     center and the R-1 flats. If you start from parking lot 143, you can head towards the R-1
-    flats and turn left at the first staircase and to your left again, the lounge will be there.
+    flats and turn left at the first staircase. The lounge should be to your left.
     </Text>
     </View>
     </View>
@@ -234,7 +234,7 @@ function RCCOakescomp( navigation ){
     The Academic Resources Center (ARCenter) is a great place for students seeking
     assistance. LSS is a program with tutors and mentors who provide a variety of 
     options for students who need help in their classes. They have workshops, group 
-    tutoring, and even 1-on-1 tutoring for writing. This is highly recommended for every 
+    tutoring, and even 1-on-1 sessions for writing. This is highly recommended for every 
     UCSC student and is open 9am-6pm Monday through Friday.
     ------------------------------------------
     The ARC facility is located east of Heller Drive and south of McHenry Library. One route
@@ -292,7 +292,7 @@ function CrownMerrillcomp( navigation ){
     as well. It is also conveniently located near the Ming Ong Computer Lab for anyone looking to
     work there if needed. 
     ------------------------------------------
-    If you want to get to Merrill Library/Casa Lounge, then start at the Crown/Merrill dining hall 
+    If you want to get to Merrill Library/Casa Lounge, start at the Crown/Merrill dining hall 
     and walk down the path heading east. Keep continuing towards the very next building after you 
     pass the Charles E. Merrill lounge. Enter through the door located on the right side of the 
     building.
