@@ -28,7 +28,7 @@ function HomeScreencomp({ navigation }) {
       <View style={styles.space} />
       <Button theme="primary" label="UCSC Landmarks Button" routeName = "UCSC Landmarks Name" />
       <View style={styles.space} />
-      <Button theme="primary" label="UCSC Study Rooms Button" routeName = "UCSC Study Rooms Name" />
+      <Button theme="primary" label="UCSC Study Rooms Button" routeName = "UCSC SR Name" />
       <View style={styles.space} />
       </View>
   
@@ -107,6 +107,76 @@ function SECRETcomp( navigation ){
   );
 }
 
+function STUDYROOMcomp( navigation ) {
+  return (
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+      <View style={styles.space} />
+      {/* Buttons within UCSC Landmarks */}
+      <Button theme="primary" label="C9/JRL button" routeName = "C9C10Study Name" />
+      <View style={styles.space} />
+      <Button theme="primary" label="PorterKresge button" routeName = "PorterKresgeStudy Name" />
+      <View style={styles.space} />
+      <Button theme="primary" label="RCCOakes button" routeName = "RCCOakes Name" />
+      <View style={styles.space} />
+      <Button theme="primary" label="StevensonCowell" routeName = "StevensonCowell Name" />
+      <View style={styles.space} />
+      <Button theme="primary" label="CrownMerrill" routeName = "CrownMerrill Name" />
+    </View>
+    </View>
+  );
+}
+
+function C9C10comp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC GO!</Text>
+    </View>
+    </View>
+  );
+}
+
+function PorterKresgecomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
+}
+
+function RCCOakescomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
+}
+
+function StevensonCowellcomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
+}
+
+function CrownMerrillcomp( navigation ){
+  return(
+    <View style={styles.container}>
+    <View style={styles.footerContainer}>
+    <Text theme="primary">UCSC Go!</Text>
+    </View>
+    </View>
+  );
+}
+
 //const ucscImage = require('./assets/UCSCGo.png');
 const placeholderImage = require('./assets/UCSCGo.png');
 
@@ -125,7 +195,37 @@ export default function App() {
           and Component is the component it'll render */
         name="Home"
         component={HomeScreencomp}
-        options={{ title: 'Overview'}} />
+        options={{ title: 'Home'}} />
+
+        <Stack.Screen
+        name="UCSC SR Name"
+        component={STUDYROOMcomp}
+        options={{ title: 'UCSC Study Rooms'}} />
+
+        <Stack.Screen
+        name="C9C10Study Name"
+        component={C9C10comp}
+        options={{ title: 'College 9/JRL Study Rooms'}} />
+
+        <Stack.Screen
+        name="PorterKresgeStudy Name"
+        component={PorterKresgecomp}
+        options={{ title: 'Porter/Kresge Study Rooms'}} />
+
+        <Stack.Screen
+        name="RCCOakes Name"
+        component={RCCOakescomp}
+        options={{ title: 'RCC/Oakes Study Rooms'}} />
+        
+        <Stack.Screen
+        name="StevensonCowell Name" 
+        component={StevensonCowellcomp} 
+        options={{ title: 'Stevenson/Cowell Study Rooms'}} />
+
+        <Stack.Screen
+        name="CrownMerrill Name" 
+        component={CrownMerrillcomp} 
+        options={{ title: 'Crown/Merrill Study Rooms'}} />
         
         <Stack.Screen
         name="UCSC Landmarks Name" 
@@ -153,39 +253,11 @@ export default function App() {
         name="Secret Name"
         component={SECRETcomp}
         options={{ title: 'Secret Area/Stage...'}} />
-      
-
 
       </Stack.Navigator>
     </NavigationContainer>
   );
   }
-{/*      
-    <NavigationContainer>
-      <StackLandmark.Navigator initialRouteName="Landmark">
-        <StackLandmark.Screen
-        name="Landmark"
-        component={SCLandMarkcomp}
-        options={{ title: 'Landmark Overview'}} />
-        <StackLandmark.Screen
-
-        name="HikingTrail"
-        component={HIKEcomp}
-        options={{ title: 'HikingTrail name'}} />
-        
-      </StackLandmark.Navigator>
-    </NavigationContainer> */}
-
-
-{/*This is for Study Rooms */}
-{/*
-<Stack.Navigator initialRouteName="Home">
-<Stack.Screen
-name="Study Rooms" 
-component={StudyRooms} 
-options={{ title: 'UCSC Study Rooms'}} />
-</Stack.Navigator>
-*/}
 
 const styles = StyleSheet.create({
   //container for whole screen
