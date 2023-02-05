@@ -1,7 +1,10 @@
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { useNavigation, NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function Button({ label, theme }) {
+    const navigation = useNavigation()
     if (theme === "primary") {
         return (
           <View
@@ -9,7 +12,7 @@ export default function Button({ label, theme }) {
           >
             <Pressable
               style={[styles.button, { backgroundColor: "#fff" }]}
-              onPress={() => alert('This does nothing yet')}
+              onPress={() => navigation.navigate('UCSC Landmarks')}
             >
               <FontAwesome
                 //name=""
