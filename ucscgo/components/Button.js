@@ -12,7 +12,7 @@ export default function Button({ label, theme }) {
           >
             <Pressable
               style={[styles.button, { backgroundColor: "#fff" }]}
-              onPress={() => navigation.navigate('UCSC Landmarks')}
+              onPress={() => navigation.navigate('UCSC Landmarks name')}
             >
               <FontAwesome
                 //name=""
@@ -24,7 +24,27 @@ export default function Button({ label, theme }) {
             </Pressable>
         </View>
         );
-      }
+    }
+    if (theme == "secondary") {
+      return (
+        <View
+        style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18}]}
+        >
+          <Pressable
+            style={[styles.button, { backgroundColor: "#fff" }]}
+            onPress={() => navigation.navigate('UCSC Study Rooms')}
+          >
+            <FontAwesome
+              //name=""
+              size={16}
+              color="#25292e"
+              style={styles.buttonIcon}
+            />
+            <Text style={[styles.buttonLabel, { color: "#25292e" }]}>{label}</Text>
+          </Pressable>
+      </View>
+      );
+    }
 
     return (
     <View style={styles.buttonContainer}>
